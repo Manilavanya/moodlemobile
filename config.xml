@@ -71,13 +71,13 @@
 
     <gap:platform name="ios" />
     <gap:platform name="android" />
-    <gap:plugin spec="https://github.com/example/cordova-plugin.git" source="git" />
-    <gap:plugin spec="https://github.com/example/cordova-plugin.git" source="git" />
-  <gap:plugin spec="https://bitbucket.org/example/cordova-plugin.git" source="git" />
-  <gap:plugin spec="https://github.com/example/cordova-plugin.git" />
-<gap:plugin spec="https://bitbucket.org/example/cordova-plugin.git#v1.0.1" />
-<gap:plugin spec="https://github.com/example/cordova-plugin.git#exp-branch" />
-<gap:plugin spec="https://bitbucket.org/example/cordova-plugin.git#61523d1" />
+    <plugin spec="https://github.com/example/cordova-plugin.git" source="git" />
+    <plugin spec="https://github.com/example/cordova-plugin.git" source="git" />
+  <plugin spec="https://bitbucket.org/example/cordova-plugin.git" source="git" />
+  <plugin spec="https://github.com/example/cordova-plugin.git" />
+<plugin spec="https://bitbucket.org/example/cordova-plugin.git#v1.0.1" />
+<plugin spec="https://github.com/example/cordova-plugin.git#exp-branch" />
+<plugin spec="https://bitbucket.org/example/cordova-plugin.git#61523d1" />
     <gap:plugin name="org.apache.cordova.camera" source="npm"/>
     <gap:plugin name="org.apache.cordova.media-capture" source="npm"/>
     <gap:plugin name="org.apache.cordova.console" source="npm"/>
