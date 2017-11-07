@@ -1,52 +1,54 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns     = "http://www.w3.org/ns/widgets"
-        xmlns:gap = "http://phonegap.com/ns/1.0"
-        xmlns:android = "http://schemas.android.com/apk/res/android"
         id        = "net.moodlemoot.emantras"
         versionCode = "1"
         version   = "1.0">
     <name>emantras</name>
-
-    <description>
        emantras Mobile official app
-    </description>
-
     <author href="http://moodle.com" email="emantras@moodle.com">
        emantras
-    </author>
-
-    <gap:config-file platform="ios" parent="CFBundleShortVersionString">
         <string>1.0</string>
-    </gap:config-file>
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
 
-    <feature name="http://api.phonegap.com/1.0/device" />
-    <feature name="http://api.phonegap.com/1.0/network"/>
-    <!-- The following phonegap camera feature block Google Play to install the app on Nexus 7.
-         Nothing is broken without it, so we disable it.
-         Note that at the current moment we don't use phonegap video capture plugin - MOBILE-296.
-         -->
-    <!-- feature name="http://api.phonegap.com/1.0/camera"/ -->
-    <feature name="http://api.phonegap.com/1.0/contacts"/>
-    <feature name="http://api.phonegap.com/1.0/media"/>
-    <feature name="http://api.phonegap.com/1.0/file"/>
+    <access origin="*" />
+    <access origin="tel:*" launch-external="yes" />
+    <access origin="mailto:*" launch-external="yes" />
+    <access origin="geo:*" launch-external="yes" />
 
+    <allow-navigation href="cdvfile:*" />
+    <allow-navigation href="content:*" />
+    <allow-navigation href="data:*" />
+    <allow-navigation href="*" />
+
+    <allow-intent href="*" />
     <preference name="phonegap-version" value="cli-6.5.0" /> 
-    <preference name="orientation"      value="default" />
-    <preference name="target-device"    value="universal" />
-    <preference name="fullscreen"       value="false" />
-    <preference name="stay-in-webview"  value="false" />
-    <preference name="webviewbounce"    value="false" />
-    <preference name="prerendered-icon" value="true" />
-    <preference name="load-url-timeout" value="60000" />
-
+    <preference name="AppendUserAgent" value="MoodleMobile" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-targetSdkVersion" value="19" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="false" />
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" onload="true"/>
+    </feature>
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <preference name="iosPersistentFileLocation" value="Compatibility" />
-
-    <icon src="icon.png" />
     <icon src="img/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
     <icon src="img/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
     <icon src="img/icon/android/icon-72-hdpi.png"   gap:platform="android"    gap:density="hdpi" />
     <icon src="img/icon/android/icon-96-xhdpi.png"  gap:platform="android"    gap:density="xhdpi" />
+    <icon src="img/icon/android/icon-144-xxhdpi.png"  gap:platform="android"    gap:density="xxhdpi" />
+    <icon src="img/icon/ios/icon-small.png" gap:platform="ios" width="29" height="29" />
+    <icon src="img/icon/ios/icon-small@2x.png" gap:platform="ios" width="58" height="58" />
+    <icon src="img/icon/ios/icon-small@3x.png" gap:platform="ios" width="87" height="87" />
+
+    <icon src="img/icon/ios/icon-40.png"            gap:platform="ios"      width="40" height="40" />
+    <icon src="img/icon/ios/icon-40@2x.png"         gap:platform="ios"      width="80" height="80" />
+    <icon src="img/icon/ios/icon-60.png" gap:platform="ios" width="60" height="60" />
+    <icon src="img/icon/ios/icon-60@2x.png" gap:platform="ios" width="120" height="120" />
+    <icon src="img/icon/ios/icon-60@3x.png" gap:platform="ios" width="180" height="180" />
+
     <icon src="img/icon/ios/icon-57.png"            gap:platform="ios"        width="57" height="57" />
     <icon src="img/icon/ios/icon-72.png"            gap:platform="ios"        width="72" height="72" />
     <icon src="img/icon/ios/icon-76.png"            gap:platform="ios"        width="76" height="76" />
@@ -54,12 +56,10 @@
     <icon src="img/icon/ios/icon-76@2x.png"         gap:platform="ios"        width="152" height="152" />
     <icon src="img/icon/ios/icon-57@2x.png"         gap:platform="ios"        width="114" height="114" />
     <icon src="img/icon/ios/icon-72@2x.png"         gap:platform="ios"        width="144" height="144" />
-
     <gap:splash src="img/splash/android/android_ldpi_portrait.png.png" gap:platform="android" gap:density="ldpi"/>
     <gap:splash src="img/splash/android/android_mdpi_portrait.png" gap:platform="android" gap:density="mdpi"/>
     <gap:splash src="img/splash/android/android_hdpi_portrait.png" gap:platform="android" gap:density="hdpi"/>
     <gap:splash src="img/splash/android/android_xhdpi_portrait.png" gap:platform="android" gap:density="xhdpi"/>
-
     <gap:splash src="img/splash/ios/iphone_portrait.png" gap:platform="ios" width="320" height="480"/>
     <gap:splash src="img/splash/ios/iphone_retina_portrait.png" gap:platform="ios" width="640" height="960"/>
     <gap:splash src="img/splash/ios/iphone5.png" gap:platform="ios" width="640" height="1136" />
@@ -71,8 +71,8 @@
 
     <gap:platform name="ios" />
     <gap:platform name="android" />
-    
-    <gap:plugin name="cordova-plugin-camera" source="npm" />
+
+       <gap:plugin name="cordova-plugin-camera" source="npm" />
     <gap:plugin name="cordova-plugin-media-capture" source="npm">
         <param name="CAMERA_USAGE_DESCRIPTION" value="We'd like to access your camera to let you take a photo"/>
         <param name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="We'd like to access your photo library to let you pick a photo"/>
@@ -95,16 +95,17 @@
     </gap:plugin>
     <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
         <param name="URL_SCHEME" value="moodlemobile" />
-    </gap:plugin>
     <gap:plugin name="ionic-plugin-keyboard" source="npm" />
     <gap:plugin name="cordova-plugin-zip" source="npm" />
     <gap:plugin name="cordova-plugin-local-notifications-mm" source="npm" />
     <gap:plugin name="net.tunts.webintent" spec="https://github.com/Tunts/WebIntent.git" source="git" />
     <gap:plugin name="ch.ti8m.documenthandler" spec="https://github.com/ti8m/DocumentHandler.git" source="git" />
 
-    <gap:config-file platform="android" parent="/manifest">
          <application android:debuggable="true" />
+ <gap:config-file platform="ios" parent="NSAppTransportSecurity" mode="add">
+        <dict>
+            <key>NSAllowsArbitraryLoads</key><true/>
+        </dict>
     </gap:config-file>
     <access origin="*" />
 
-</widget>
